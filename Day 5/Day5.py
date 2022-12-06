@@ -64,7 +64,7 @@ def problemTwo():
                     move_From = int(line_SP[3])
                     move_To = int(line_SP[5])
                     for i in range(move_Amount,0, -1):
-                        q_List[move_To-1].insert(0,q_List[move_From-1].pop(i))
+                        q_List[move_To-1].insert(0,q_List[move_From-1].pop(i-1))
                     print("\n")
         for crates in q_List:
             print(crates)
