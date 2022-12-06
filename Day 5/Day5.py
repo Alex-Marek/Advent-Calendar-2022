@@ -30,11 +30,12 @@ def problemOne():
                     move_Amount = int(line_SP[1])
                     move_From = int(line_SP[3])
                     move_To = int(line_SP[5])
-                    print(f'moving {move_Amount} from queue:{move_From} to:{move_To}')
                     for i in range(0,move_Amount):
                         q_List[move_To-1].insert(0,q_List[move_From-1].pop(0))
+        print("Problem One: ", end="")
         for crates in q_List:
-            print(crates)
+            print(crates[0], end="")
+    print("\n")
 
 def problemTwo():
     q_List = []
@@ -65,12 +66,13 @@ def problemTwo():
                     move_To = int(line_SP[5])
                     for i in range(move_Amount,0, -1):
                         q_List[move_To-1].insert(0,q_List[move_From-1].pop(i-1))
-                    print("\n")
+        print("Problem Two: ", end="")
         for crates in q_List:
-            print(crates)
+            print(crates[0], end="")
+    print("\n")
 
 
 
 if __name__ == "__main__":
-    #problemOne()
+    problemOne()
     problemTwo()
